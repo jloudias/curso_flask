@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loops and Conditionals</title>
+</head>
+<body>
+<h1>Loops and Conditionals Page</h1>
+<hr>
+<h2>List the products of a given company.</h2>
+<br><br>
+Company Name: {{ company }}
+<ul>
+    {% for k,v in produtos.items() %}
+        {% if v==company %}
+            <li>{{ k }}</li>
+        {% else %}
+            <li>No products found for this company.</li>
+        {% endif %}
+    {% endfor %}
+
+</ul>
+<p>
+    <a href="/">Back to Home Page</a>
+</p>
+
+
+
+</body>
+</html>

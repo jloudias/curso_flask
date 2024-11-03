@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Macros 1</title>
+</head>
+<body>
+{% macro todo_li(text, completed=False) %}
+    <li>{{ "[x]" if completed else "[ ]" }} - {{ text }}</li>
+{% endmacro %}
+<h1>Welcome to Jinja 2</h1>
+<hr>
+{% set num_tarefas = tarefas|length %}
+ {% if num_tarefas > 0 %}
+    <h3>You have {{ num_tarefas }} todos to execute.</h3>
+    <ul>
+        {% for text, completed in tarefas %}
+            {{ todo_li(text, completed) }}
+        {% endfor %}
+    </ul>
+
+
+{% else %}
+    <h4>Nothing to do!</h4>
+{% endif %}
+
+</body>
+</html>

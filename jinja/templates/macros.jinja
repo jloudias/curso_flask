@@ -1,0 +1,7 @@
+{% macro lista_tarefas(tarefas) %}
+    <ul>
+        {% for text, completed in tarefas %}
+           <li> {{ "[x]" if completed else "[ ]" }} -  {{ text }} </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

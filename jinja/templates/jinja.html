@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Macros 2</title>
+    {% import "macros.jinja" as macros %}
+</head>
+<body>
+    <h1>Welcome to macros in Jinja 2</h1>
+    <hr>
+    {% set num_tarefas = tarefas|length %}
+    {% if num_tarefas > 0 %}
+        <h3>You have {{ num_tarefas }} todos.</h3>
+        {{ macros.lista_tarefas(tarefas) }}
+    {% else %}
+        <h4>Nothing to do!</h4>
+    {% endif %}
+</body>
+</html>

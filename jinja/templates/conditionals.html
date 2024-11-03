@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditionals</title>
+</head>
+<body>
+<h1>Conditionals Page</h1>
+<hr>
+<h2>List the products of a given company.</h2>
+<br><br>
+Company Name: {{ company }}
+<ul>
+    {% if company=="Apple" %}
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>iMac</li>
+    {% elif company=="Microsoft" %}
+        <li>Office 365</li>
+        <li>Azure</li>
+        <li>.Net</li>
+    {% else %}
+        <li>No products for this company</li>
+    {% endif %}
+
+</ul>
+<p>
+    <a href="/">Back to Home Page</a>
+</p>
+
+
+
+</body>
+</html>
